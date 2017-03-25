@@ -1,2 +1,2 @@
 # TestingToolSuite
-The html and javascript build for a testing tool suite university assignment
+University Assignment, the full code structure and development code used in the creation of an online dashboard system. 
