@@ -1,0 +1,31 @@
+.search{
+  width: 100%;
+  margin-top: 20px;
+  margin-left: 20px;
+  display: inline-block;
+  form{
+    input{
+      width: 60%;
+      background-color: transparent;
+      border: none;
+      @extend .cabrito;
+      color: $green;
+      border-bottom: solid 3px $green;
+      @include font-size(24);
+      @include placeholder{
+        color:$green;
+      }
+    }
+    button{
+      border: none;
+      background: transparent;
+      color: $green;
+      @include font-size(24);
+      transition: 0.3s;
+      &:hover{
+        transition: 0.3s;
+        color:darken($green, 10%);
+      }
+    }
+  }
+}

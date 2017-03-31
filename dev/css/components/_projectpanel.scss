@@ -1,0 +1,111 @@
+.projects{
+  padding: 10px 0px 10px 30px;
+  display: inline-block;
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  h3{
+    @extend .cabrito;
+  }
+}
+.project_panel{
+  white-space: normal;
+  margin-right: 20px;
+  display: inline-block;
+  background-color: $light-grey;
+  padding: 10px 30px;
+  border-radius: 7px;
+  position: relative;
+  max-width: 300px;
+  &:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    background-color:$green;
+    height: 100%;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+  }
+  h4{
+    @extend .cabrito;
+    font-weight: bold;
+    @include font-size(26);
+  }
+  .arrow{
+    position: absolute;
+    padding: 10px 15px;
+    bottom: 0;
+    right: 0;
+    border-bottom-right-radius: 7px;
+    color: $green;
+    @include font-size(18);
+    transition: 0.3s;
+    &:hover{
+      background-color: $green;
+      color: white;
+      cursor: pointer;
+    }
+  }
+  ul{
+    padding-left: 0;
+    margin-bottom: 0;
+    li{
+      list-style: none;
+      margin-top: 5px;
+      .images{
+        li{
+          margin-right: 5px;
+          width: auto;
+          padding: 0;
+        }
+      }
+      ul{
+        li{
+          display: inline-block;
+          float: left;
+          width: 40%;
+          text-align: center;
+          background-color: white;
+          padding: 4px 0;
+          margin-right:5%;
+          img{
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            float: left;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.project_panel_complete{
+  @extend .project_panel;
+  &:before{
+    content: "";
+    background-color:red;
+  }
+}
+
+
+.projects_completed{
+  @extend .projects;
+  .project_panel{
+    &:before{
+      content: "";
+      background-color: red;
+    }
+    .arrow{
+      color: red;
+      &:hover{
+        background-color: red;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+}

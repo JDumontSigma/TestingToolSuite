@@ -1,0 +1,22 @@
+footer{
+  width: 100%;
+  float: left;
+  display: inline-block;
+  border-top: solid 1px $dark-grey;
+  padding: 10px 0;
+  img{
+    float: right;
+    width: 100px;
+    margin-right: 20px;
+    display: inline-block;
+    margin-left: 10px;
+  }
+  p{
+    @extend .cabrito;
+    text-align: right;
+    margin-top: 0;
+    margin-bottom: 0;
+    @include font-size(10);
+
+  }
+}

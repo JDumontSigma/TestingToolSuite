@@ -1,0 +1,46 @@
+#sus{
+  .question{
+    margin-bottom: 20px;
+    p{
+      font-weight:bold;
+    }
+  }
+  label{
+    width: 15%;
+    padding:20px 0;
+    background-color: $light-grey;
+    display: inline-block;
+    margin-right: 1%;
+    text-align: center;
+    position: relative;
+  }
+  input[type=radio]{
+    display: none;
+  }
+  input[type=radio]:checked + label {
+    &:before{
+      content: "";
+      width: 10px;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top:0;
+      background-color: $green;
+    }
+    font-weight: bold;
+  }
+  button{
+    border: none;
+    width: 25%;
+    float: right;
+    text-align: center;
+    background-color: $green;
+    color: white;
+    transition: 0.3s;
+    padding: 20px 0;
+    &:hover{
+      background-color: darken($green,10%);
+      transition: 0.3s;
+    }
+  }
+}

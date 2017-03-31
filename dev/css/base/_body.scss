@@ -1,0 +1,30 @@
+html{
+	  font-size: 62.5%;
+		height: 100%;
+}
+
+body{
+  @include font-size(14);
+	overflow-x: hidden;
+	height: 100%;
+	padding-left: 30vw;
+}
+.navOpen{
+	padding-left: 40vw;
+	@media(max-width: 992px){
+		padding-left: 50vw;
+	}
+	@media(max-width: 767px){
+		padding-left: 75vw;
+	}
+}
+.main{
+	min-height: 94vh;
+}
+.error{
+	color: red !important;
+	font-size:1.6rem !important;
+}
+.display{
+	left: 0;
+}

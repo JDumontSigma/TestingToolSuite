@@ -1,0 +1,157 @@
+.admin{
+  padding: 10px 0px 10px 30px;
+  display: inline-block;
+  width: 100%;
+  overflow-x: auto;
+  form{
+    width: 100%;
+    legend,label,input,button{
+      @extend .cabrito;
+    }
+    input[type="checkbox"]{
+      display: none;
+      position: relative;
+    }
+    input[type="checkbox"] + label{
+      display: inline-block;
+      width: 40%;
+      float: left;
+      text-align: center;
+      margin-right: 5%;
+      padding:10px 0;
+      background-color: white;
+      position: relative;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    input[type="checkbox"]:checked + label{
+      &:before{
+        content: "";
+        width: 10px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top:0;
+        background-color: $green;
+      }
+    }
+    img{
+      width: 100px;
+      height: 100px;
+      background-color:$dark-grey;
+      margin-bottom: 20px;
+    }
+    label{
+      display:block;
+      margin-top:15px;
+      margin-bottom: 5px;
+    }
+    input{
+      width: 100%;
+      max-width: 450px;
+      background-color: transparent;
+      border: none;
+      clear: right;
+      display: block;
+      border-bottom: solid 3px $green;
+      color: $green;
+      @include font-size(16);
+      @include placeholder{
+        color:$green;
+      }
+    }
+    legend{
+      margin-bottom: 0;
+      margin-top: 40px;
+      position: relative;
+      border-bottom: none;
+      &:first-of-type{
+        margin-top: 0;
+        &:before{
+        content: "";
+        height: 0;
+      }
+      }
+      &:before{
+        content: "";
+        position: absolute;
+        top: -10px;
+        width: 30px;
+        height: 4px;
+        background-color:$dark-grey;
+      }
+    }
+    button{
+      border:none;
+      background-color: $green;
+      color: white;
+      display: block;
+      margin:50px 0 0px;
+      padding: 10px 15px;
+      float: right;
+    }
+  }
+  .new,.current{
+    background-color: $light-grey;
+    width: 46%;
+    margin-right: 2%;
+    float: left;
+    padding: 20px;
+    display: inline-block;
+    h4{
+      @extend .cabrito;
+      @include font-size(26);
+    }
+  }
+  ul{
+    padding: 0;
+    li{
+      list-style: none;
+      width: 90%;
+      margin-left: 5%;
+      background-color: white;
+      margin-bottom: 15px;
+      padding: 10px 20px;
+      display: inline-block;
+      white-space: nowrap;
+      clear: both;
+      position: relative;
+      @extend .cabrito;
+      p{
+        display: inline-block;
+        margin-bottom: 0;
+        padding: 10px 0;
+      }
+      .upgradeUser{
+        background-color: $green;
+        &:hover{
+          background-color: darken($green, 10%);
+          transition: 0.3s;
+        }
+      }
+      .deleteUser{
+        background-color: red;
+        &:hover{
+          cursor: pointer;
+          background-color: darken(red,10%);
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+      a{
+        display: inline-block;
+        float: right;
+        color:white;
+        text-align: center;
+        width: 100px;
+        padding: 10px 20px;
+        margin-left:10px;
+        transition: 0.3s;
+
+
+
+      }
+    }
+  }
+}

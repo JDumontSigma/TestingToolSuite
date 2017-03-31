@@ -1,0 +1,73 @@
+.account{
+  padding: 10px 0px 10px 30px;
+  display: inline-block;
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  h3{
+    @extend .cabrito;
+  }
+  form{
+    width: 100%;
+    legend,label,input,button{
+      @extend .cabrito;
+    }
+    img{
+      width: 100px;
+      height: 100px;
+      background-color:$dark-grey;
+      margin-bottom: 20px;
+    }
+    label{
+      display:block;
+      margin-top:15px;
+      margin-bottom: 5px;
+    }
+    input{
+      width: 100%;
+      max-width: 450px;
+      background-color: transparent;
+      border: none;
+      clear: right;
+      display: block;
+      border-bottom: solid 3px $green;
+      color: $green;
+      @include font-size(16);
+      @include placeholder{
+        color:$green;
+      }
+    }
+    legend{
+      margin-bottom: 0;
+      margin-top: 30px;
+      position: relative;
+      &:first-of-type{
+        &:before{
+        content: "";
+        height: 0;
+      }
+      }
+      &:before{
+        content: "";
+        position: absolute;
+        top: -10px;
+        width: 30px;
+        height: 4px;
+        background-color:$dark-grey;
+      }
+    }
+    button{
+      border:none;
+      background-color: $green;
+      color: white;
+      display: block;
+      margin:15px 0 20px;
+      padding: 10px 15px;
+    }
+  }
+}
+.security,.personal{
+  width: 50%;
+  float: left;
+  display: inline-block;
+}

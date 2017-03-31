@@ -1,0 +1,150 @@
+nav{
+  @extend .cabrito;
+  width: 30vw;
+  height: 100vh;
+  background-color: $dark-grey;
+  color: white;
+  display: inline-block;
+  float: left;
+  position: fixed;
+  left: 0;
+  .brand{
+    height:auto;
+    background-color: transparent;
+    width: 50%;
+    clear: right;
+    display: inline-block;
+    margin: 30px 25%;
+  }
+  .profile{
+    margin-top: 30px;
+    display: inline-block;
+    padding: 20px 0px;
+    width: 70%;
+    margin-left: 15%;
+    position: relative;
+    img{
+      background-color: white;
+      width: 100px;
+      height: 100px;
+      display: inline-block;
+      float: left;
+      margin-right: 15px;
+    }
+    h4{
+      position: relative;
+      display: inline-block;
+      margin: 30px 0 0 0;
+      &:after{
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 60px;
+        height: 1px;
+        background-color:rgba(255,255,255,0.35);
+      }
+    }
+  }
+
+  ul{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+
+    li{
+      text-align: center;
+      display: inline-block;
+      width: 100%;
+      padding: 15px 0;
+      list-style: none;
+      position: relative;
+      border-top: solid 3px rgba(255,255,255,0.2);
+      &:hover,&active,&:focus{
+        text-decoration: none;
+        cursor: pointer;
+        color: $green;
+        &:before{
+          content: "";
+          position: absolute;
+          top: -3px;
+          left: 0;
+          width: 20px;
+          height:calc(100% + 6px);
+          background-color: $green;
+        }
+        a{
+          text-decoration: none;
+          cursor: pointer;
+          color: $green;
+        }
+
+      }
+      a{
+        width: 30%;
+        display: inline-block;
+        text-align: left;
+        color: white;
+        text-decoration: none;
+        &:hover,&active,&:focus{
+          text-decoration: none;
+          cursor: pointer;
+          color: $green;
+        }
+      }
+
+      }
+      .active{
+        a{
+          color: $green;
+        }
+        &:before{
+          content: "";
+          position: absolute;
+          top: -3px;
+          left: 0;
+          width: 20px;
+          height:calc(100% + 6px);
+          background-color: $green;
+        }
+    }
+    .logout .active{
+        a{
+          color: red;
+        }
+        &:before{
+          content: "";
+          position: absolute;
+          top: -3px;
+          left: 0;
+          width: 20px;
+          height:calc(100% + 6px);
+          background-color: red;
+        }
+    }
+    .logout{
+      color: red;
+      &:hover,&focus,&active{
+        &:before{
+          content: "";
+          position: absolute;
+          top: -3px;
+          left: 0;
+          width: 20px;
+          height:calc(100% + 6px);
+          background-color: red;
+        }
+        a{
+          text-decoration: none;
+          cursor: pointer;
+          color: red;
+        }
+      }
+
+    }
+
+  }
+
+}
