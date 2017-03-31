@@ -1192,7 +1192,7 @@ $(function() {
         //if the form validates this code executes
         submitHandler: function(t) {
             $.ajax({
-                url: '../../TestingTools/php/functions/_login.php',
+                url: '../../php/functions/_login.php',
                 type: 'POST',
                 data: {
                     username: $('#username').val(),
@@ -1306,7 +1306,7 @@ $(function() {
                   }
                 });
             $.ajax({
-                url: 'http://localhost:8888/TestingTools/php/functions/SQL/_newProject.php',
+                url: '../../php/functions/SQL/_newProject.php',
                 type: 'POST',
                 data: {
                     title: $('#title').val(),
@@ -1501,7 +1501,7 @@ $(function() {
         },
         submitHandler: function(t) {
           $.ajax({
-              url: 'http://localhost:8888/TestingTools/php/functions/SQL/_newMember.php',
+              url: '../../php/functions/SQL/_newMember.php',
               type: 'POST',
               data: {
                   email: $('#email').val(),
@@ -1535,7 +1535,7 @@ $('.upgradeUser').click(function(e){
   e.preventDefault();
   var upgradeID = $(this).attr('id');
   $.ajax({
-      url: '../../TestingTools/php/functions/SQL/_upgrade.php',
+      url: '../../php/functions/SQL/_upgrade.php',
       type: 'POST',
       data: {
           id: upgradeID
@@ -1561,7 +1561,7 @@ $('.deleteUser').click(function(e){
   e.preventDefault();
   var deleteID = $(this).attr('id');
   $.ajax({
-      url: '../../TestingTools/php/functions/SQL/_delete.php',
+      url: '../../php/functions/SQL/_delete.php',
       type: 'POST',
       data: {
           id: deleteID
@@ -1664,7 +1664,7 @@ $(function() {
           }
 
           $.ajax({
-              url: '../../TestingTools/php/functions/SQL/_uploadSUS.php',
+              url: '../../php/functions/SQL/_uploadSUS.php',
               type: 'POST',
               data: {
                 test:testId,
@@ -1727,7 +1727,7 @@ $(function() {
               }
           });
           $.ajax({
-              url: '../../TestingTools/php/functions/SQL/_uploadPRC.php',
+              url: '../../php/functions/SQL/_uploadPRC.php',
               type: 'POST',
               data: {
                 test:testId,
@@ -1791,7 +1791,7 @@ $(function() {
           });
 
           $.ajax({
-              url: '../../TestingTools/php/functions/SQL/_uploadPRC.php',
+              url: '../../php/functions/SQL/_uploadPRC.php',
               type: 'POST',
               data: {
                 test:testId,
@@ -1822,7 +1822,7 @@ $('.add').click(function(){
   var testId = $(this).attr('id');
   if(conf){
     $.ajax({
-        url: '../../TestingTools/php/functions/SQL/_newParticipant.php',
+        url: '../../php/functions/SQL/_newParticipant.php',
         type: 'POST',
         data: {
           test:testId,
@@ -1851,7 +1851,7 @@ $('.projectComplete').click(function(e){
   var testId = $(this).find('a').attr('id');
   if(conf){
     $.ajax({
-        url: '../../TestingTools/php/functions/SQL/_completeTest.php',
+        url: '../../php/functions/SQL/_completeTest.php',
         type: 'POST',
         data: {
           test:testId,
